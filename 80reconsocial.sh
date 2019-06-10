@@ -1,7 +1,7 @@
 #!/bin/bash
 # 80recon
 # Search usernames in 80 social networks
-# https://github.com/kaliboys/80recon
+# https://github.com/kaliboys/80reconsoical
 # www.kaliboys.com
 
 trap 'printf "\n";partial;exit 1' 2
@@ -79,9 +79,10 @@ printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Hamkhone: \e[0m"
 
 if [[ $check_hamkhone == *'1'* ]]; then
 printf "\e[1;92m Found!\e[0m https://www.hamkhone.ir/%s\n" 
-
-
-
+printf "https://www.hamkhone.ir/%s\n" $username > $username.txt
+elif [[ $check_hamkhone == *'0'* ]]; then
+printf "\e[1;93mNot Found!\e[0m\n"
+fi
 
 ## INSTAGRAM
 
